@@ -9,5 +9,6 @@ namespace DAL.Interfaces
     public interface IOrderRepository : IRepository<Order>
     {
         public Task<Order> GetByObjectPropertiesAsync(Order order);
+        Task UpdateAsync(Order order);
     }
 }

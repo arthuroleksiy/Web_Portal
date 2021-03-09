@@ -46,7 +46,19 @@ namespace Web_Portal.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
-
+        [HttpPut]
+        public async Task<ActionResult> Update([FromBody] ProductDTO productDTO)
+        {
+            try
+            {
+                await ProductService.UpdateAsync(productDTO);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Internal server error");
+            }
+        }
         [HttpPost]
         public async Task<ActionResult> Add([FromBody] ProductDTO productDTO)
         {
@@ -61,8 +73,6 @@ namespace Web_Portal.Controllers
                 await ProductService.AddAsync(productDTO);
                 return Ok(productDTO);
                 // return CreatedAtRoute("Product", new { id = productDTO.ProductId }, productDTO);
-                
-
             }
             catch (Exception ex)
             {
@@ -82,7 +92,6 @@ namespace Web_Portal.Controllers
             {
                 return StatusCode(500, "Internal server error");
             }
-
         }
     }
 }

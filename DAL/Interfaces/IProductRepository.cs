@@ -9,5 +9,6 @@ namespace DAL.Interfaces
     public interface IProductRepository : IRepository<Product>
     {
         Task<List<Product>> GetAllAsync();
+        Task UpdateAsync(Product entity);
     }
 }

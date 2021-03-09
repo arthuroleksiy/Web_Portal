@@ -53,5 +53,11 @@ namespace DAL.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public async Task UpdateAsync(Order order)
+        {
+            db.Set<Order>().Update(new Order { OrderId = order.OrderId, StatusId = order.StatusId, OrderDate = order.OrderDate, CustomerId = order.CustomerId, Comment = order.Comment, Products = order.Products });
+            await db.SaveChangesAsync();
+        }
     }
 }

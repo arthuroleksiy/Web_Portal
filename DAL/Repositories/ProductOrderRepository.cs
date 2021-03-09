@@ -33,6 +33,13 @@ namespace DAL.Repositories
             db.ProductOrders.Remove(entity);
         }
 
+        public async Task DeleteByIdAsync(int orderId, int productId)
+        {
+            var i = await db.ProductOrders.FindAsync(orderId, productId);
+            db.ProductOrders.Remove(i);
+            await db.SaveChangesAsync();
+        }
+
         public Task DeleteByIdAsync(int id)
         {
             throw new NotImplementedException();

@@ -32,6 +32,19 @@ namespace Web_Portal.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+        [HttpPut]
+        public async Task<ActionResult> Update([FromBody] OrderDTO orderDTO)
+        {
+            try
+            {
+                await OrderService.UpdateAsync(orderDTO);
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Internal server error");
+            }
+        }
 
         [HttpPost]
         public async Task<ActionResult> Add([FromBody] OrderDTO orderDTO)

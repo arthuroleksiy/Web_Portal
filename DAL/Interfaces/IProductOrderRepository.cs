@@ -12,7 +12,7 @@ namespace DAL.Interfaces
 
         Task<List<ProductOrder>> GetByProductIdAsync(int product);
         Task AddProductToOrderAsync(ProductOrder entity);
-        
+        Task DeleteByIdAsync(int orderId, int productId);
         Task UpdateAsync(ProductOrder entity);
     }
 }

@@ -9,6 +9,7 @@ namespace BLL.Interfaces
 {
     public interface IOrderService : ICrud<OrderDTO>
     {
-        Task AddProductToOrderAsync(ProductDTO product, OrderDTO order);
+        Task AddProductToOrderAsync(ProductDTO product, OrderDTO order); 
+        
     }
 }

@@ -59,9 +59,38 @@ namespace BLL.Services
             throw new NotImplementedException();
         }
 
-        public Task UpdateAsync(OrderDTO model)
+        public async Task UpdateAsync(OrderDTO model)
         {
-            throw new NotImplementedException();
+            var order = mapper.Map<OrderDTO, Order>(model);
+            order.Products.Select(i => i.OrderId = model.OrderId).First();
+            await UnitOfWork.OrderRepository.UpdateAsync(new Order
+            {
+                OrderId = order.OrderId,
+                Comment = order.Comment,
+                CustomerId = order.CustomerId,
+                OrderDate = order.OrderDate,
+                StatusId = order.StatusId,
+                Products = null
+            });
+            var productOrders = await UnitOfWork.ProductOrderRepository.GetAllAsync();
+            var alreadyOrdered = productOrders.Where(i => i.OrderId == model.OrderId).Select(j => j).ToList();
+            foreach(var i in alreadyOrdered)
+            {
+                if(!productOrders.Select(j => j.ProductId).Contains(i.ProductId))
+                {
+                    UnitOfWork.ProductOrderRepository.Delete(i);
+                }
+            }
+            foreach (var i in order.Products)
+            {
+                foreach (var j in alreadyOrdered)
+                {
+                    if(i.ProductId != j.ProductId && i.OrderId != j.ProductId) {
+                        await UnitOfWork.ProductOrderRepository.DeleteByIdAsync(i.ProductId, i.OrderId);
+                }
+                }
+            }
+            await UnitOfWork.SaveAsync();
         }
 
         public Task AddProductToOrderAsync(ProductDTO product, OrderDTO order)

@@ -62,9 +62,21 @@ namespace BLL.Services
 
         }
 
-        public Task UpdateAsync(ProductDTO model)
+        public async Task UpdateAsync(ProductDTO model)
         {
-            throw new NotImplementedException();
+            var productDTO = mapper.Map<ProductDTO, Product>(model);
+            await UnitOfWork.ProductRepository.UpdateAsync(new Product
+            {
+                AvailableQuantity = productDTO.AvailableQuantity,
+                CategoryId = productDTO.CategoryId,
+                CreateDate = productDTO.CreateDate,
+                ProductSizeId = productDTO.ProductSizeId,
+                ProductName = productDTO.ProductName,
+                Description = productDTO.Description,
+                Price = productDTO.Price,
+                ProductId = productDTO.ProductId
+            });
+            await UnitOfWork.SaveAsync();
         }
     }
 }
