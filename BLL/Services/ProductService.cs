@@ -28,7 +28,7 @@ namespace BLL.Services
             await UnitOfWork.ProductRepository.AddAsync(new Product { 
                 AvailableQuantity = product.AvailableQuantity, 
                 CategoryId = product.CategoryId, 
-                CreateDate = product.CreateDate, 
+                CreateDate = DateTime.Now, 
                 ProductSizeId = product.ProductSizeId, 
                 ProductName = product.ProductName, 
                 Description = product.Description,

@@ -63,7 +63,6 @@ namespace DAL.Repositories
         {
             db.Set<Product>().Update(entity);
             await db.SaveChangesAsync();
-
         }
     }
 }
