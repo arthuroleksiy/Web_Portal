@@ -7444,23 +7444,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Артур\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Artur.Oleksii\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Артур\\Desktop\\Web_Portal-master\\DAL\\DAL.csproj",
+      "projectUniqueName": "C:\\Users\\Artur.Oleksii\\Source\\Repos\\arthuroleksiy\\Web_Portal\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "C:\\Users\\Артур\\Desktop\\Web_Portal-master\\DAL\\DAL.csproj",
-      "packagesPath": "C:\\Users\\Артур\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Артур\\Desktop\\Web_Portal-master\\DAL\\obj\\",
+      "projectPath": "C:\\Users\\Artur.Oleksii\\Source\\Repos\\arthuroleksiy\\Web_Portal\\DAL\\DAL.csproj",
+      "packagesPath": "C:\\Users\\Artur.Oleksii\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Artur.Oleksii\\Source\\Repos\\arthuroleksiy\\Web_Portal\\DAL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Артур\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Artur.Oleksii\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7520,7 +7516,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

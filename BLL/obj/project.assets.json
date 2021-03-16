@@ -7409,23 +7409,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Артур\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Artur.Oleksii\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Артур\\Desktop\\Web_Portal-master\\BLL\\BLL.csproj",
+      "projectUniqueName": "C:\\Users\\Artur.Oleksii\\Source\\Repos\\arthuroleksiy\\Web_Portal\\BLL\\BLL.csproj",
       "projectName": "BLL",
-      "projectPath": "C:\\Users\\Артур\\Desktop\\Web_Portal-master\\BLL\\BLL.csproj",
-      "packagesPath": "C:\\Users\\Артур\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Артур\\Desktop\\Web_Portal-master\\BLL\\obj\\",
+      "projectPath": "C:\\Users\\Artur.Oleksii\\Source\\Repos\\arthuroleksiy\\Web_Portal\\BLL\\BLL.csproj",
+      "packagesPath": "C:\\Users\\Artur.Oleksii\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Artur.Oleksii\\Source\\Repos\\arthuroleksiy\\Web_Portal\\BLL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Артур\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Artur.Oleksii\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7439,8 +7435,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Артур\\Desktop\\Web_Portal-master\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\Артур\\Desktop\\Web_Portal-master\\DAL\\DAL.csproj"
+            "C:\\Users\\Artur.Oleksii\\Source\\Repos\\arthuroleksiy\\Web_Portal\\DAL\\DAL.csproj": {
+              "projectPath": "C:\\Users\\Artur.Oleksii\\Source\\Repos\\arthuroleksiy\\Web_Portal\\DAL\\DAL.csproj"
             }
           }
         }
@@ -7475,7 +7471,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }
