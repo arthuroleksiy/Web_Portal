@@ -45,8 +45,8 @@ namespace Web_Portal.Controllers
                 }
 
                 await CustomerService.AddAsync(customerDTO);
-
-                return CreatedAtRoute("CustomerId", new { id = customerDTO.CustomerId }, customerDTO);
+                return Ok();
+                //return CreatedAtRoute("CustomerId", new { id = customerDTO.CustomerId }, customerDTO);
 
             }
             catch (Exception ex)
